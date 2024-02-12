@@ -1,0 +1,21 @@
+Introduction
+    - Broadcasting your Laravel events allows you to share the same event names and data between your server-side Laravel application and your client-side JavaScript application.
+
+Setting up our Broadcast
+    - config -> broadcast.php
+    - composer require pusher/pusher-php-server
+
+Setting up Pusher API
+    - pusher.com and sign in
+    - Get Started (Channel)
+    - Create App
+    - App key
+    - Put on ENV
+
+Create our Broadcasting flow
+    - Create Broadcast Event
+    - php artisan make:event EventName
+    - app/Event/EventName
+    - class MessageNotification implements ShouldBroadcast
+    - public function __construct($message)
+    - $this->message = $message
